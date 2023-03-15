@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doanso()">run</button>
+<script>
+
+    function doanso(){
+        let begin = +prompt('Nhap so bat dau');
+        let end = +prompt('Nhap so ket thuc');
+        let randomNumber = Math.round((Math.random() * end))
+        while (begin < end){
+            let count = 0
+            console.log(randomNumber)
+            let result = +prompt('Nhap so muon doan')
+            if(result === randomNumber){
+                alert('Dung')
+                break
+            }
+            if(result < randomNumber){
+                alert('Lon hon')
+                count ++
+            }
+            else {
+                alert('Nho hon')
+                count ++
+            }
+            if(count === 4){
+                alert('Thua')
+                break
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>
